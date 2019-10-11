@@ -8,12 +8,17 @@ int main()
 
 	cin >> a >> b >> n >> w;
 
-	if (a < b)
+	if (a > b)
 	{
 		x = (b * n - w) / (b - a);
 		y = n - x;
 	}
-	else if (a == b)
+	else if (a < b)
+	{
+		y = (a * n - w) / (a - b);
+		x = n - y;
+	}
+	else
 	{
 		y = n / 2;
 		x = n - y;
@@ -24,13 +29,8 @@ int main()
 			return 0;
 		}
 	}
-	else
-	{
-		y = (a * n - w) / (a - b);
-		x = n - y;
-	}
 
-	if (((x*a) + (y*b)) == w && ((x>0) && (y>0)))
+	if ((a * x + b * y == w) && x != 0 && y != 0)
 	{
 		cout << x << " " << y << endl;
 	}

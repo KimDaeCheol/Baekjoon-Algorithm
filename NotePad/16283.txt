@@ -1,0 +1,22 @@
+a b n w
+
+x + y = n
+ax + by = w
+
+a = b인 경우
+x = 1
+y = 1
+
+a > b
+
+bx + by = bn
+ax + by = w
+
+x = (bn-w) / (b-a)
+
+a < b
+
+ax + ay = an
+ax + by = w
+
+y = (an-w) / (a-b)
